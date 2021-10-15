@@ -39,10 +39,10 @@ connect to a Jira server. It must be ran manually.
     $ python3 jira_oauth_setup_script.py --consumer_key="CONSUMER_KEY" JIRA_URL
 """
 
-import importlib
-import argparse
-reqs = importlib.import_module("requests-oauthlib")
-from reqs import OAuth1Session
+# import importlib
+# import argparse
+# reqs = importlib.import_module("requests-oauthlib")
+# from reqs import OAuth1Session
 from oauthlib.oauth1 import SIGNATURE_RSA
 from Crypto.PublicKey import RSA
 from google.cloud import secretmanager
