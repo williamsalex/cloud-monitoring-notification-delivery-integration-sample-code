@@ -41,7 +41,7 @@ connect to a Jira server. It must be ran manually.
 
 
 import argparse
-from requests_oauthlib import OAuth1Session
+from requests-oauthlib import OAuth1Session
 from oauthlib.oauth1 import SIGNATURE_RSA
 from Crypto.PublicKey import RSA
 from google.cloud import secretmanager
