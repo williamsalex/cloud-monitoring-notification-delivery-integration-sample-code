@@ -42,7 +42,6 @@ connect to a Jira server. It must be ran manually.
 import importlib
 import argparse
 reqs = importlib.import_module("requests_oauthlib")
-from reqs import OAuth1Session
 from oauthlib.oauth1 import SIGNATURE_RSA
 from Crypto.PublicKey import RSA
 from google.cloud import secretmanager
@@ -165,7 +164,7 @@ def main():
 
     input('Once complete, press "Enter" to proceed\n')
 
-    oauth = OAuth1Session(args.consumer_key,
+    oauth = reqs.OAuth1Session(args.consumer_key,
                           signature_method=SIGNATURE_RSA,
                           rsa_key=private_key_pem,
                           signature_type='auth_header',
